@@ -6,7 +6,7 @@ def main():
 
         print(f"--- Begin report of {target_book} ---")
         print(f"There are {count_words(file_contents)} words in this text!")
-        print(f"The word Frankenstein is used {count_specific_word(file_contents, "Frankenstein")}")
+        print(f"The word Frankenstein is used {count_specific_word(file_contents, "Frankenstein")} times!")
         print("")
         print("Character breakdowns:")
         character_counts = count_characters(file_contents)
@@ -38,7 +38,7 @@ def count_specific_word(text, word_to_search):
     words = text.split()
     count = 0
     for i in words:
-        if i == word_to_search:
+        if word_to_search in i:
             count += 1
     
     return count
